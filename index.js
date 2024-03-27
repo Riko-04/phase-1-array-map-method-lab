@@ -12,5 +12,14 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  // Function to convert a string to title case
+  const toTitleCase = (str) => {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  };
+
+  // Map over the tutorials array and convert each string to title case
+  return tutorials.map(toTitleCase);
+};
+
+// Export the titleCased function if needed
+// module.exports = titleCased;
